@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation
+END
+ValidationRuleInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/ValidationRuleInfo.cs
+END
+ValidationRuleArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/ValidationRuleArgs.cs
+END
+ValidationRuleHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/ValidationRuleHandler.cs
+END
+CommonRules.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/CommonRules.cs
+END
+ValidationRules.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/ValidationRules.cs
+END
+BrokenRulesList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/BrokenRulesList.cs
+END
+BrokenRule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Validation/BrokenRule.cs
+END

@@ -1,0 +1,427 @@
+
+15/5/2009: deploy 0.11.9
+
+* core: supporto per la modalità demo e configurabilità dei limiti di generazione delle compilation
+  unit
+
+
+*****************************
+
+
+2/2/2009: deploy 0.11.8
+
+* bll.fs: improvement vari nella generazione automatica degli stub tra BLL
+
+
+*****************************
+
+
+20/11/2008: deploy 0.11.7
+
+* bomtemplates.fs: la classe generata Transaction non ha più un costruttore pubblico ma una coppia di metodi statici pubblici
+  che wrappano la costruzione e l'invocazione della coppia di metodi membri do(), ora divenuti protected, per non permettere
+  all'utente di creare erroneamente oggetti di tipo Transaction nel proprio scope
+
+
+*****************************
+
+
+28/10/2008: deploy 0.11.6
+
+* modelcsharp: EAAutomation.cs: ogni elemento non conosciuto nei component diagram di WUC e BLL viene ora skippato anziché
+  generare un'eccezione di tipo "NotSupported"
+
+
+*****************************
+
+
+24/10/2008: deploy 0.11.5
+
+* core: bomtemplates.fs: nuovo meccanismo di conversione da BO a BOA: non esiste più il costruttore ma solo l'operatore di
+  cast implicito; inoltre il body di tale operatore si occupa di costruire un BO by-key oppure uno nuovo dipendentemente
+  dalla null-ness dell'UId del BOA sorgente - rispettando la persistenza originale del BO e, contemporaneamente, le regole
+  di subtyping ed ereditarietà
+
+* core: boamtemplates.fs: il codice generato sulla firma di un BOA che è sottoclasse di qualcosa non ha più la virgola di
+  troppo tra il nome della base class e l'interfaccia I*Ext dopo il ":" tra la serie di supertipi
+
+
+*****************************
+
+
+22/10/2008: deploy 0.11.4
+
+* core: bomtemplates.fs: il costruttore interno dei BO dal rispettivo BOA invoca ora il costruttore fratello per chiave
+  nel caso in cui il BOA abbia un UId non-null oppure quello vuoto in caso contrario: ciò rende corretta la conversione di
+  un BO da un BOA che è stato a sua volta precedentemente convertito da un BO, mantenendo lo stato dell'entity intatto
+  tramite l'accesso al DAL by-key
+
+
+*****************************
+
+
+22/10/2008: deploy 0.11.3
+
+* core: args.fs: aggiunto il flag "-bll-diagram" tra le opzioni di generazione che consente di overridare il path del
+  diagramma a componenti del BLL nel file EAP (il default è "Model/BLL/BLL")
+
+
+*****************************
+
+
+20/10/2008: deploy 0.11.2
+
+* modelcsharp: EAAutomation.cs: nel rescan dei nodi non connessi di BOM e BLLM viene ora effettuato un controllo del tipo di
+  elemento e scartato qualunque DiagramObject che non sia, rispettivamente, un classe o una componente
+
+* modelcsharp: EAAutomation.cs: lo stereotipo della classe che si riferisce al dataobject nel diagramma di un WUC supporta
+  ora l'annotazione "dataobject", "do" e "data object" case-unsensitive
+
+* modelcsharp: EAAutomation.cs: lo stereotipo della classe che si riferisce al BO nel diagramma di un WUC supporta ora
+  l'annotazione "businessobject", "bo" e "business object" case-unsensitive oppure la stringa vuota 
+
+
+*****************************
+
+
+17/10/2008: deploy 0.11.1
+
+* core: il tipo built-in 'float' viene tradotto in 'double' in tutti i layer di generazione in C#
+
+* modelfsharp: reworking massiccio dei component model e ridenominazione del diagramma di definizione dei
+  BLL in BLLM: ora il tipo componente in F# ed il suo avatar in C# è riusato per WUC e BLL e sottosta a meccanismi di
+  acquisizione tramite grafo analoghi al BOM - molte strutture dati che descrivono nodi ed archi dei grafi che rappresentano
+  un diagramma UML in generale e le relative strutture dati gemelle che rappresentano i diagrammi specifici (BOM, BLLM, WUC)
+  sono state soggette ad u refactoring massiccio al fine di massimizzare il riuso di tipi e codice
+
+* modelcsharp: nuova acquisizione di connettori in un component diagram
+
+* core: bll.fs: nuovo engine di stubbing per i metodi: in caso di relazioni di dipendenza stereotipate come "use" tra
+  componenti BLL differenti nello stesso BLLM viene innescato un algoritmo di ricerca euristica degli stub possibili; nel
+  caso in cui i nomi dei metodi (anche in overload) siano uguali, i tipi di ritorno compatibli (secondo le regole di match
+  tra tipi di ritorno, le quali contemplano: la controvarianza del subtyping, il casting implicito tra BO e BOA, la coercion
+  automatica tra tipi numerici, l'invarianza tra i tipi parametrici e l'indeterminazione del void) ed una permutazione
+  dell'insieme degli argomenti del chiamante sia un sovrainsieme improprio di una permutazione degli argomenti del chiamato
+  (dove i nomi degli argomenti devono essere uguali e i tipi devono essere compatibili secondo la definizione di
+  compatibilità per i tipi di ritorno - eccetto il caso void), allora è possibile generare uno stub. In caso in cui
+  l'overloading, la permutazione degli argomenti o compatibilità tra tipi diano origine ad ambiguità (vale a dire: potrebbero
+  esistere più stub possibili), l'euristica fallisce e procede alla generazione di codice dummy la cui implementazione
+  lancia una eccezione 'NotImplementedException' - analogamente a quanto accade nel caso di default in cui non esiste
+  alcuna relazione di dipendenza tra BLL e l'intero corpus di metodi viene generato dummy
+
+* core: wuc.fs: refactoring della navigazione della struttura dati di un WUC secondo la nuova rimodellazione apportata nel
+  modulo ModelFSharp
+
+* core: args.fs: nuovo flag di compilazione '-overwrite-bll-ext' attiva la sovrascrittura dei file .ext.cs del BLL
+
+* core: numerosi refactoring minori sui meccanismi di catching delle eccezioni che nella nuova release CTP di F# permettono
+  il pattern matching a run-time sul tipo dell'eccezione oltre che sul valore
+
+
+******************************
+
+
+15/10/2008: deploy 0.11.0
+
+* porting dell'intero codice e dei file progetto di VS per la nuova versione di F# CTP 1.9.6.2: tale release ufficializza
+  F# come membro premier della piattaforma di sviluppo .NET ed introduce alcune feature, sia linguistiche che di
+  interfacciamento a VS, che costituscono il percorso ufficiale che F# prenderà in termini di evoluzione - il porting
+  pertanto è indispensabile per rendere l'applicazione compatibile con le future release del framework e del compilatore
+
+* modelfsharp: nuovo design del sistema di traduzione dei tipi: esistono ora tipi built-in, tipi speciali e tipi parametrici.
+  I tipi built-in sono espressi lessicalmente da nomi in minuscolo (int, bool, char, string, string[N], datetime, float) e
+  vengono nativamente tradotti in maniera opportuna nei vari layer di generazione; i tipi speciali sono tipi la cui forma è
+  "SP:ID", dove ID è un identificatore qualunque e SP è una keyword (BO o BOA, attualmente) che qualifica il genere a cui
+  appartiene ID, e permettono di riferirsi appunto ad un BO o ad un BOA, scatenando un meccanismo di traduzione che
+  tiene conto opportunamente del namespace di origine di tali oggetti; i tipi parametrici sono espressioni di tipo
+  sintatticamente ricorsive che permettono di specificare tipi della forma "ID<T>", dove ID è un identificatore e T un tipo     qualunque  (incluso un tipo complesso), e sono sottoposto ad un meccanismo di traduzione che utilizza i generics.
+  Sintatticamente esistono 3 famiglie di tipi: i tipi semplici (supportati dagli attributi di BO e WUC),
+  i tipi complessi (supportati dagli argomenti dei metodi dei BO, dei WUC e dei BLL) ed i tipi di ritorno (supportati solo
+  dal tipo di ritorno dei metodi dei BO, dei WUC e dei BLL). I tipi semplici sono tipi built-in oppure un identificatore
+  qualunque che inizia con un carattere maiuscolo (nel qual caso viene tradotto "as is" da ogni layer di generazione,
+  permettendo all'utente di esprimere tipi custom); i tipi complessi sono tipi semplici oppure tipi speciali oppure tipi
+  parametrici; i tipi di ritorno sono tipi complessi oppure la keyword 'void'
+
+* modelfsharp: classmodel.fs: nuove funzioni di parsing ad alto livello per espressioni di tipo: 
+
+* modelfsharp: supporto per la sintassi astratta e relative strutture dati dei component diagram che esprimono BLL
+
+* modelcsharp: acquisizione dei component diagram dei BLL (incluse le ProvidedInterface) e trasformazione nelle nuove
+  strutture dati che li rappresentano
+
+* modelcsharp: acquisizione delle RequiredInterface nelle componenti dei WUC
+
+* modelcsharp: supporto del nuovo sistema di tipi nei metodi e negli attributi di ogni layer: le classi del BOM, le
+  componenti del BLL e le classi e componenti dei WUC
+
+* core: args.fs: nuovo flag di compilazione per il layer BLL e relativi flag di supporto analoghi agli altri layer di
+  generazione
+
+* core: bll.fs/blltemplates.fs: nuovo algoritmo e relativi template di generazione dei BLL
+
+* core: bom.fs/boam.fs/wuc.fs: reworking completo dei meccanismi di manipolazione dei namespace: la nuova soluzione rende
+  più rigida e meno ambigua la generazione del namespace corretto negli identificatori di tipo che fanno riferimento a 
+  BOA o BO
+
+
+****************************
+
+
+02/10/2008: deploy 0.10.2
+
+* modelfsharp: nuovi lexer e parser per le espressioni di tipo che compaiono nei diagrammi EAP nelle firme dei metodi e nei
+  tipi degli attributi
+
+* core: tutti i valori di tipo ClassModel.ty non sono più stringhe triviali ma variant complessi che rappresentano
+  espressioni di tipo - l'intero meccanismo di traduzione delle espressioni di tipo ha subito un massiccio reworking
+  per poter supportare tipi complessi con traduzioni differenti nei vari layer di generazione
+
+* core: supporto per il tipo 'string[N]' (dove N è un intero positivo strettamente maggiore di zero) che viene tradotto in
+  'string' per i layer di generazione in C# ed in nvarchar(N) per il DDL; il tipo 'string' semplice viene invece tradotto
+  in 'ntext' nel DDL e sempre 'string' nei layer in C#
+
+
+
+****************************
+
+
+12/09/2008: deploy 0.10.1
+
+* core: wuctemplates.fs: reworking massiccio dell'infrastruttura di template per la generazione delle Form: essa è simmetrica
+  a quella delle Grid e non dipende più dal MultiForm precedentemente utilizzato
+
+* core: nuovo flag di generazione -overwrite-wuc-ext si comporta come gli altri flag di overwrite ma per i file .ext.cs
+  generati per i WUC
+
+
+****************************
+
+
+10/09/2008: deploy 0.10.0
+
+* core: wuctemplates.fs: reworking massiccio dell'infrastruttura di template per la generazione delle Grid: ora non esiste
+  più il file .designer.cs ma un file .ext.cs che implementa delle partial class customizzabili per view, presenter e
+  dataobject grazie alle quali è possibile per il programmatore introdurre in maniera indolore il proprio comportamento
+  custom nella logica del presenter e nell'accesso ai dati da parte del dataobject, oltre che il comportamento della
+  view facoltativamente
+
+* core: wuc.fs: reworking dell'algoritmo di generazione dei wuc compatibilmente con la nuova infrastruttura ed i nuovi
+  template di codice
+
+* core: il flag di generazione -designer-support non esiste più
+
+* core: la generazione dei WUC di tipo Form è temporaneamente disabilitata per motivi di reworking
+
+
+****************************
+
+
+22/08/2008: deploy 0.9.3
+
+* core: boamtemplates.fs: le get-property HasAggregated() e HasComposed() lato target di una aggregazione o composizione
+  verificano ora non solamente la presenza di un aggregato/composto in-memory ma anche il valore della foreign key sull'entity
+  sottostante tramite accesso al DAL - ciò permette a tali property di ritornare 'true' anche nel caso in cui non sia stata
+  effettuata alcuna operazione di aggregazione/composizione tra BO ma essa effettivamente esiste nei dati su database
+
+* core: bomtemplates.fs: le relazione di associazione, sia lato source che target, ora generano delle get-property booleane
+  HasAssociated()/HasAssociation(), analoghe alle HasAggregated() e HasComposed() ma su entrambi i lati
+
+
+*****************************
+
+
+21/08/2008: deploy 0.9.2
+
+* core: boamtemplates.fs: fixato altri problemi di doppio referenziamento nel codice generato per le set-property delle
+  relazioni di aggregazione e composizione: ora avviene un test di non-null per ogni singola operazione di referenziamento
+  singola e doppia
+
+
+*****************************
+
+
+21/08/2008: deploy 0.9.1
+
+* core: boamtemplates.fs: fixato il codice generato per le set-property delle relazioni di aggregazione e composizione: ora
+  avviene un test di non-null prima dell'eventuale sistituzione (e svuotamento) della vecchia collection
+
+* core: l'opzione di generazione -connector-types è stata sostituita con -no-connector-types: il suo significato è invertito,
+  pertanto il programma di default genera sempre i tipi dei connettori nei nomi degli identificatori delle property di
+  relazione a meno che non si specifichi questo flag - ciò fa sì che il generatore assuma per default il comportamento più
+  sicuro e meno error-prone
+
+
+*****************************
+
+
+18/08/2008: deploy 0.9.0
+
+* core: supporto per l'ereditarietà a livello di diagramma: una superclasse taggata con lo stereotype "base" non viene
+  generata ma ereditata dalle sottoclassi a livello di generazione, anziché di codice generato; la classe generata pertanto
+  non eredita nulla ed include tutti i medoti e le property della base class in maniera autonoma
+
+* core: nuova opzione di compilazione -generate-base-classes permette di forzare la generazione del codice delle classi
+  taggate con lo stereotype "base" nella generazione del BOM, del BOAM e del DDL
+
+
+*****************************
+
+
+08/08/2008: deploy 0.8.1
+
+* core: nella generazione di BOM e BOAM, gli stereotype "BO" e "BOA" associabili ad un metodo action nel class diagram del
+  BOM triggerano la generazione, rispettivamete, del metodo solo nella classe BO o solo nella classe BOA; in assenza di
+  stereotype, il metodo viene generato in entrambe le classi. Le stringhe costanti che specificano gli stereotype sono
+  configurabili a compile-time e sono definite nel file config.fs
+
+
+*****************************
+
+
+07/08/2008: deploy 0.8.0
+
+* core: supporto per i BOA: tali classi rappresentano degli avatar dei BO che tuttavia non hanno alcun legame diretto con
+  essi. I BOA vengono creati da ed in BO solamente attraverso utility dei BO, non dei BOA; i BOA sono inoltre
+  automaticamente convertibili da ed in BO automaticamente tramite degli operatori di coercion. I BOA si comporatano come
+  business object "puri", non supportano la persistenza ed esistono esclusivamente in-memory; supportano tutti i tipi di
+  relazione e sono completamente simmetrici ed analoghi ai relativi BO
+
+* core: nuova opzione di compilazione -boam genera il nucleo di classi avatar dei business object, in maniera indipendente
+  dal BOM
+
+* core: nuova opzione di compilazione -boampath permette di specificare il percoro specifico per la generazione del boam
+
+* core: nuova opzione di compilazione -override-boam-ext, analogamente all'opzione -override-bom-ext, specifica al generatore
+  di sovrascrivere i file sorgente .ext.cs generati contenenti i body dei metodi action
+
+* core: ogni relazione di aggregazione e composizione ora genera una get-property booleana 'Has$NOME$' dove $NOME$ è il
+  nome della relazione, secondo le regole di nomenclatura, che permette all'utente di conoscere lo stato della relazione
+  senza doverla esplorare (la qual cose attiverebbe il meccanismo di creazione on-the-fly dei BO legati)
+
+* core: ogni relazione di aggregazione e composizione ora genera un metodo 'Unlink$NOME$()' dove $NOME$ è il
+  nome della relazione, secondo le regole di nomenclatura, che permette all'utente di fare il "detach" della relazione
+  in maniera esplicita
+
+* core: bomtemplates.fs: reworking dei template di generazione delle relazioni: c'è molto più riuso e meno duplicazione ora
+
+
+
+
+*****************************
+
+
+06/08/2008: deploy 0.8.0pre
+
+* core: nuovo supporto per i BOA: con l'opzione di compilazione -boam vengono generati gli avatar dei BO; i flag di generazioe
+  sono analoghi a quelli per il BOM
+
+
+*****************************
+
+
+06/08/2008: deploy 0.7.1
+
+* core: bomtemplate.fs: aggregation e composition dal lato source generano ora, oltre alla usuale property di relazione,
+  una nuova property booleana di ispezione della presenza della relazione e un nuovo metodo di unlinking esplicito dalla
+  relazione senza la rimozione del BO
+
+
+*****************************
+
+
+06/08/2008: deploy 0.7.0
+
+* il ChangeLog di Caffettiera è da ora in poi in un file a parte nel repository della libreria
+
+* core: il codice generato include ora alcuni commenti dettagliati secondo le convenzioni di documentazione di .NET in XML
+
+* core: il codice generato per il BOM ed i WUC supporta i cambiamenti e le novità di Caffettiera: alcune interfacce e classi generate
+  non sono retrocompatibili a compile-time
+
+* core: bomtemplates.fs: il file generato BO.cs include ora una classe nuova Transaction che implementa l'interfaccia
+  parametrica di Caffettiera ITransaction col parametro di tipo in F-bound; nel codice generato del BOM non esiste più
+  alcun riferimento visibile dall'esterno al tipo TransactionManager generato da NetTiers, ma solamente riferimenti a
+  questo nuovo wrapper
+
+* core: bomtemplate.fs: i BO generati hanno un overload del metodo Commit() in più che permette il commit transazionale
+  dato un oggetto Transaction creato dall'utente - ciò contente al programmatore (ed anche all'Env di Caffettiera) di operare
+  commit cross-transazionali con rollback
+
+* core: bomtemplate.fs: il metodo RecCommit() prende ora come argomento un Transaction anziché un TransactionManager
+  generato da NetTiers
+
+* core: bomtemplate.fs: i BO generati hanno un nuovo costruttore che prende un Env di Caffettiera come parametro e permette
+  all'utente di effetture rapidamente la registrione di nuovi BO nell'ambiente semplicemente passandolo al costruttore
+
+* core: bomteplates.fs: il costruttore by-key di BO ora restituisce null se l'entity di NetTiers è null (ovvero, se non esiste
+  a database)
+
+* core: wuctemplates.fs: i WUC generati specificano ora il tipo Transaction definito nel sottonamespace BOM del namespace
+  specificato al generatore per la costruzione di view e presenter generici, secondo le novità di Caffettiera
+
+* test: refactoring di file e folder di TestBOM e TestWUC
+
+
+*******************************
+
+
+05/08/2008: deploy 0.6.1
+
+* mgen: fixato un bug di naming in caso di connector type attivi che invertiva source e target nelle relazioni a causa di
+  uno scorretto lookup dei nomi di variabile "$TYPE$" e "$REVTYPE$" nei template di codice
+
+* mgen: reworking e ripulita dei meccanismi di gestione delle sourceside e delle targetside del BOM
+
+* mgen: config.fs: invertiti i type-name per sourceside e targetside a seguito del reworking: ora i nomi delle property
+  che si riferiscono alle relazioni source di una Aggregazione o Composizione è 'Aggregated' o 'Composed', mentre in una
+  Associazione è 'Associated'; viceversa i target sono 'Aggregation' o 'Composition' o 'Associated'
+
+
+*******************************
+
+
+04/08/2008: deploy 0.6
+
+* caffettiera[C#]: temporaneamente le feature del branch 0.7 sono state disattivate per permettere la compilazione
+
+* caffettiera: refactoring delle directory e dei progetti VS sia per C# che per F# per un miglior posizionamento di
+  dll e binari
+
+* caffettiera[C#]: la get-property Aggregation<BO>.IsReadOnly restituisce sempre false
+
+* caffettiera[C#]: il metodo Aggregation<BO>.ReallyRemove() ha una nuova firma: ora rimuove tutti gli elementi che soddisfano
+  il predicato in argomento ed è principalmente utilizzato dal codice di MGen nelle RecCommit() di BO che hanno delle
+  relazioni di aggregazione o composizione source-side
+
+* mgen: refactoring delle directory e dei progetti VS per un miglior posizionamento di dll e binari
+
+* mgen: il codice generato della RecCommit() di ogni BO ora risolve il problema della rimozione durante lo scorrimento
+  delle aggregation/composition: utilizzando la nuova implementazione della Aggregation<BO>.ReallyRemove() è possibile
+  effettuare un filtraggio della collection tramite il predicato e contemporaneamente eseguire la RecCommit() di ciascun
+  BO in un solo pass
+
+* mgen: refactoring massiccio dei template di generazione del BOM: non ci sono ora duplicazioni ed è stata simulata una
+  forma di polimorfismo a run-time sui template per il riuso degli stessi
+
+* mgen: il modulo di generazione del BOM ora supporta le action: tutti i metodi che compaiono nel class diagram del BOM,
+  indipendentemente dallo stereotype, vengono raccolti in una partial class di "extension" in una compilation unit separata
+  il cui file ha nome 'BO.ext.cs', dove BO è il nome del business object ed è anche il prefisso del file con la definizione
+  della partial class principale; la partial class contenuta nella compilation unit "ext" implementa inoltre un'interfaccia
+  che dichiara tutti i metodi richiesti ma che è definita nella compilation unit principale: in tal modo essa viene rigenerata
+  assieme alla partial class principale (al contrario della "ext" che può essere non rigenerata tramite l'apposito flag
+  di compilazione) e provoca un errore di compilazione nel caso in cui nel class diagram del BOM sia stato modificato
+  il set di metodi/action e la partial class "ext" non li implementi effettivamente tutti correttamente
+
+* mgen: il tipo Gen.compilation_unit e la sua funzione di output Gen.generate_compilation_unit supportano ora il flag
+  di overwrite
+
+* mgen: il modulo di output ora notifica sul log la sovrascrittura di una compilation unit se il file è già esistente: per
+  ciascun file generato la scritta 'done' significa che il file è stato generato correttamente e non esisteva, 'overwritten'
+  significa che è stato generato correttamente ed è stato sovrascritto a quello pre-esistente e 'skipped' significa che
+  il file è esistente e le opzioni di generazione specificate dall'utente in command line non consentono la sovrascrittura
+  
+* mgen: nuova opzione -overwrite-bom-ext forza la sovrascrittura dei file .ext.cs contenenti le partial class dei BO che
+  definiscono le action; si badi che il comportamento di default è la NON-sovrascrittura di tali file, mentre per tutti gli
+  altri file del BOM, del DDL e dei WUC è la sovrascrittura
+
+

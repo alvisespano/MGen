@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/progettoM/!svn/ver/85/src/Test/GenTest.Entities
+END
+IEntityFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/IEntityFactory.cs
+END
+IFattura.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/progettoM/!svn/ver/84/src/Test/GenTest.Entities/IFattura.cs
+END
+ISpecchietto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/ISpecchietto.cs
+END
+IEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/progettoM/!svn/ver/73/src/Test/GenTest.Entities/IEntity.cs
+END
+GenTest.Entities.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/progettoM/!svn/ver/85/src/Test/GenTest.Entities/GenTest.Entities.csproj
+END
+RigaFatturaBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/progettoM/!svn/ver/84/src/Test/GenTest.Entities/RigaFatturaBase.generated.cs
+END
+ListBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/progettoM/!svn/ver/73/src/Test/GenTest.Entities/ListBase.cs
+END
+GenericTypeConverter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/GenericTypeConverter.cs
+END
+EntityBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityBase.cs
+END
+PistoneBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/PistoneBase.generated.cs
+END
+RigaFattura.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/RigaFattura.cs
+END
+IMacchina.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/IMacchina.cs
+END
+EntityHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityHelper.cs
+END
+EntityBaseCore.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/progettoM/!svn/ver/73/src/Test/GenTest.Entities/EntityBaseCore.generated.cs
+END
+IMotore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/IMotore.cs
+END
+EntityKeyBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityKeyBase.cs
+END
+Pistone.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Pistone.cs
+END
+EntityFilter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityFilter.cs
+END
+IRigaFattura.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/progettoM/!svn/ver/84/src/Test/GenTest.Entities/IRigaFattura.cs
+END
+EntityKeyBaseCore.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityKeyBaseCore.generated.cs
+END
+genTest.Entities.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/progettoM/!svn/ver/85/src/Test/GenTest.Entities/genTest.Entities.xml
+END
+IEntityCacheItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/IEntityCacheItem.cs
+END
+IPistone.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/IPistone.cs
+END
+MacchinaBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/MacchinaBase.generated.cs
+END
+MotoreBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/MotoreBase.generated.cs
+END
+FatturaBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/progettoM/!svn/ver/84/src/Test/GenTest.Entities/FatturaBase.generated.cs
+END
+IEntityKey.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/IEntityKey.cs
+END
+TList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/progettoM/!svn/ver/73/src/Test/GenTest.Entities/TList.cs
+END
+EntityFactoryBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityFactoryBase.cs
+END
+EntityLocator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityLocator.cs
+END
+EntityCache.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityCache.cs
+END
+IEntityId.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/IEntityId.cs
+END
+SpecchiettoBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/progettoM/!svn/ver/63/src/Test/GenTest.Entities/SpecchiettoBase.generated.cs
+END
+Macchina.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Macchina.cs
+END
+EntityFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityFactory.cs
+END
+Motore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Motore.cs
+END
+Fattura.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Fattura.cs
+END
+EntityManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityManager.cs
+END
+EntityPropertyComparer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/EntityPropertyComparer.cs
+END
+EntityUtil.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/progettoM/!svn/ver/73/src/Test/GenTest.Entities/EntityUtil.cs
+END
+Specchietto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/progettoM/!svn/ver/60/src/Test/GenTest.Entities/Specchietto.cs
+END

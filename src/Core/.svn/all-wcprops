@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/progettoM/!svn/ver/124/src/Core
+END
+bll.fs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/111/src/Core/bll.fs
+END
+gen.fs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/124/src/Core/gen.fs
+END
+wuctemplates.fs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/progettoM/!svn/ver/110/src/Core/wuctemplates.fs
+END
+bom.fs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/123/src/Core/bom.fs
+END
+boam.fs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/progettoM/!svn/ver/117/src/Core/boam.fs
+END
+ddltemplates.fs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/progettoM/!svn/ver/110/src/Core/ddltemplates.fs
+END
+Core.fsproj
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/progettoM/!svn/ver/117/src/Core/Core.fsproj
+END
+main.fs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/progettoM/!svn/ver/124/src/Core/main.fs
+END
+blltemplates.fs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/progettoM/!svn/ver/111/src/Core/blltemplates.fs
+END
+args.fs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/progettoM/!svn/ver/124/src/Core/args.fs
+END
+bomtemplates.fs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/progettoM/!svn/ver/123/src/Core/bomtemplates.fs
+END
+prova.cgt
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/progettoM/!svn/ver/110/src/Core/prova.cgt
+END
+ver.fs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/124/src/Core/ver.fs
+END
+boamtemplates.fs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/progettoM/!svn/ver/121/src/Core/boamtemplates.fs
+END
+wuc.fs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/111/src/Core/wuc.fs
+END
+ddl.fs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/117/src/Core/ddl.fs
+END
+config.fs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/progettoM/!svn/ver/124/src/Core/config.fs
+END

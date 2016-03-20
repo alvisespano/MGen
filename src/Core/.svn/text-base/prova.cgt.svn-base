@@ -1,0 +1,22 @@
+
+
+create_table =
+	name (fields : Field+) ->
+		"CREATE TABLE %name.capitalized% (
+        %fields/\n%
+        )
+        ;"
+        
+field : Field = name type notnull identity -> "%name% %type% %notnull ? NOT NULL% %identity ? IDENTITY(1,1)"
+
+key = field(type:"Integer" notnull:true)
+
+pk = key(name:"ID")
+  
+fk = name -> field(name:"%name%ID" identity:false)
+  
+composition_fk = name type target -> fk(name:"%name%%type%%target%")
+    
+aggregation_fk = composition_fk
+    
+association_fk = "$NAME$$TYPE$$TARGET$ID Integer UNIQUE"

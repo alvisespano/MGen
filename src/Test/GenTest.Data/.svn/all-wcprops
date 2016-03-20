@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/progettoM/!svn/ver/85/src/Test/GenTest.Data
+END
+IEntityViewProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/progettoM/!svn/ver/60/src/Test/GenTest.Data/IEntityViewProvider.cs
+END
+GenTest.Data.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/progettoM/!svn/ver/85/src/Test/GenTest.Data/GenTest.Data.csproj
+END
+genTest.Data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/progettoM/!svn/ver/85/src/Test/GenTest.Data/genTest.Data.xml
+END
+IEntityProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/progettoM/!svn/ver/60/src/Test/GenTest.Data/IEntityProvider.cs
+END
+TransactionManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/progettoM/!svn/ver/73/src/Test/GenTest.Data/TransactionManager.cs
+END
+Utility.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/progettoM/!svn/ver/60/src/Test/GenTest.Data/Utility.cs
+END
+DataRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/progettoM/!svn/ver/73/src/Test/GenTest.Data/DataRepository.cs
+END
+ITransactionManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/progettoM/!svn/ver/60/src/Test/GenTest.Data/ITransactionManager.cs
+END

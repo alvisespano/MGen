@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8f7ccdcb-3de6-4a3b-9c17-9fc8e562d410}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>mgen</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Name>Core</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <WarningLevel>4</WarningLevel>
+    <StartArguments>-overwrite-bom-ext -overwrite-boam-ext -overwrite-wuc-ext -out ..\..\..\Test\generated ..\..\..\Test\GenTest.eap</StartArguments>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ver.fs" />
+    <Compile Include="config.fs" />
+    <Compile Include="gen.fs" />
+    <Compile Include="wuctemplates.fs" />
+    <Compile Include="wuc.fs" />
+    <Compile Include="boamtemplates.fs" />
+    <Compile Include="boam.fs" />
+    <Compile Include="bomtemplates.fs" />
+    <Compile Include="bom.fs" />
+    <Compile Include="blltemplates.fs" />
+    <Compile Include="bll.fs" />
+    <Compile Include="ddltemplates.fs" />
+    <Compile Include="ddl.fs" />
+    <Compile Include="args.fs" />
+    <Compile Include="main.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.PowerPack, Version=1.9.6.2, Culture=neutral, PublicKeyToken=a19089b1c74d0809">
+      <Name>FSharp.PowerPack</Name>
+      <AssemblyName>FSharp.PowerPack.dll</AssemblyName>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <ProjectReference Include="..\..\..\Caffettiera\CSharp\CaffettieraCSharp.csproj">
+      <Name>CaffettieraCSharp</Name>
+      <Project>{147a7400-c573-40fa-8072-ad03f62f89aa}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Caffettiera\FSharp\CaffettieraFSharp.fsproj">
+      <Name>CaffettieraFSharp</Name>
+      <Project>{72aacd2f-64c2-4761-b320-c1417c59438f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelCSharp\ModelCSharp.csproj">
+      <Name>ModelCSharp</Name>
+      <Project>{e54265b2-fcab-43fd-9180-8efe7525564f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelFSharp\ModelFSharp.fsproj">
+      <Name>ModelFSharp</Name>
+      <Project>{ed9aa669-7871-4ea6-9f11-fe2f2f0cee09}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\FSharp\1.0\Microsoft.FSharp.Targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

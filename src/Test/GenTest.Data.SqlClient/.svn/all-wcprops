@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/progettoM/!svn/ver/85/src/Test/GenTest.Data.SqlClient
+END
+SqlPistoneProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/progettoM/!svn/ver/60/src/Test/GenTest.Data.SqlClient/SqlPistoneProvider.cs
+END
+StoredProcedureProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/progettoM/!svn/ver/73/src/Test/GenTest.Data.SqlClient/StoredProcedureProvider.cs
+END
+SqlMacchinaProviderBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/progettoM/!svn/ver/63/src/Test/GenTest.Data.SqlClient/SqlMacchinaProviderBase.generated.cs
+END
+SqlMotoreProviderBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/progettoM/!svn/ver/63/src/Test/GenTest.Data.SqlClient/SqlMotoreProviderBase.generated.cs
+END
+SqlNetTiersProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/progettoM/!svn/ver/73/src/Test/GenTest.Data.SqlClient/SqlNetTiersProvider.cs
+END
+SqlFatturaProviderBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/progettoM/!svn/ver/84/src/Test/GenTest.Data.SqlClient/SqlFatturaProviderBase.generated.cs
+END
+SqlRigaFatturaProviderBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/progettoM/!svn/ver/84/src/Test/GenTest.Data.SqlClient/SqlRigaFatturaProviderBase.generated.cs
+END
+SqlSpecchiettoProviderBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/progettoM/!svn/ver/63/src/Test/GenTest.Data.SqlClient/SqlSpecchiettoProviderBase.generated.cs
+END
+SqlMacchinaProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/progettoM/!svn/ver/60/src/Test/GenTest.Data.SqlClient/SqlMacchinaProvider.cs
+END
+SqlMotoreProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/progettoM/!svn/ver/60/src/Test/GenTest.Data.SqlClient/SqlMotoreProvider.cs
+END
+SqlFatturaProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/progettoM/!svn/ver/60/src/Test/GenTest.Data.SqlClient/SqlFatturaProvider.cs
+END
+SqlPistoneProviderBase.generated.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/progettoM/!svn/ver/63/src/Test/GenTest.Data.SqlClient/SqlPistoneProviderBase.generated.cs
+END
+SqlRigaFatturaProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/progettoM/!svn/ver/60/src/Test/GenTest.Data.SqlClient/SqlRigaFatturaProvider.cs
+END
+SqlSpecchiettoProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/progettoM/!svn/ver/60/src/Test/GenTest.Data.SqlClient/SqlSpecchiettoProvider.cs
+END
+Procedures.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/progettoM/!svn/ver/84/src/Test/GenTest.Data.SqlClient/Procedures.xml
+END
+GenTest.Data.SqlClient.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/progettoM/!svn/ver/85/src/Test/GenTest.Data.SqlClient/GenTest.Data.SqlClient.csproj
+END
+genTest.Data.SqlClient.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/progettoM/!svn/ver/85/src/Test/GenTest.Data.SqlClient/genTest.Data.SqlClient.xml
+END

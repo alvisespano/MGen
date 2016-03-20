@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/progettoM/!svn/ver/39/src/Test/TestDAL
+END
+TestDAL.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/progettoM/!svn/ver/39/src/Test/TestDAL/TestDAL.csproj
+END
+Entity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/progettoM/!svn/ver/39/src/Test/TestDAL/Entity.cs
+END
+A.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/progettoM/!svn/ver/39/src/Test/TestDAL/A.cs
+END
+B.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/progettoM/!svn/ver/39/src/Test/TestDAL/B.cs
+END
+C.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/progettoM/!svn/ver/39/src/Test/TestDAL/C.cs
+END
+Main.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/progettoM/!svn/ver/39/src/Test/TestDAL/Main.cs
+END
